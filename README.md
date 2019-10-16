@@ -1,2 +1,2 @@
 # shopify-app-billing-resources
-This repository contains public assets for shopify app
+This repository contains public assets for shopify app.
