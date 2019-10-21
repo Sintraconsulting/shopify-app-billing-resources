@@ -1,131 +1,126 @@
-<div class="ei-container">
+<div class="fe-container">
   <div>
     <label>
       <input type="checkbox"
-             name="attributes[ei-request]"
-             value="Yes"{% if cart.attributes["ei-request"] == "Yes" %} checked{% endif %} />
-      <span>{{ 'ei.request' | t }}</span>
+             name="attributes[fe-richiesta]"
+             value="Yes"{% if cart.attributes["fe-richiesta"] == "Yes" %} checked{% endif %} />
+      <span>{{ 'fe.request' | t }}</span>
     </label>
   </div>
-  <div class="ei-fileds">
-    <div class="ei-customer-type">
+  <div class="fe-campi">
+    <div class="fe-tipo-cliente">
       <label>
         <input type="radio"
-               name="attributes[ei-customer-type]"
+               name="attributes[fe-tipo-cliente]"
                value="private"
-               {% if cart.attributes["ei-customer-type"] == "private" %}checked{% endif %}/>
-        <span>{{ 'ei.customer-type.private' | t }}</span>
+               {% if cart.attributes["fe-tipo-cliente"] == "private" %}checked{% endif %}/>
+        <span>{{ 'fe.customer-type.private' | t }}</span>
       </label>
       <label>
         <input type="radio"
-               name="attributes[ei-customer-type]"
+               name="attributes[fe-tipo-cliente]"
                value="company"
-               {% if cart.attributes["ei-customer-type"] == "company" %}checked{% endif %}/>
-        <span>{{ 'ei.customer-type.company' | t }}</span>
+               {% if cart.attributes["fe-tipo-cliente"] == "company" %}checked{% endif %}/>
+        <span>{{ 'fe.customer-type.company' | t }}</span>
       </label>
       <label>
         <input type="radio"
-               name="attributes[ei-customer-type]"
-               value="public-administration"
-               {% if cart.attributes["ei-customer-type"] == "public-administration" %}checked{% endif %}/>
-        <span>{{ 'ei.customer-type.public-administration' | t }}</span>
-      </label>
-      <label>
-        <input type="radio"
-               name="attributes[ei-customer-type]"
+               name="attributes[fe-tipo-cliente]"
                value="no-profit"
-               {% if cart.attributes["ei-customer-type"] == "no-profit" %}checked{% endif %}/>
-        <span>{{ 'ei.customer-type.no-profit' | t }}</span>
+               {% if cart.attributes["fe-tipo-cliente"] == "no-profit" %}checked{% endif %}/>
+        <span>{{ 'fe.customer-type.no-profit' | t }}</span>
       </label>
     </div>
     <div>
       <label>
-        <span>{{ 'ei.company' | t }}</span>
+        <span>{{ 'fe.company' | t }}</span>
         <input type="text"
-               name="attributes[ei-company]"
-               value="{{ cart.attributes["ei-company"] }}"/>
+               name="attributes[fe-azienda]"
+               value="{{ cart.attributes["fe-azienda"] }}"/>
       </label>
     </div>
     <div>
       <label>
-        <span>{{ 'ei.fiscal-code' | t }}</span>
-        <input type="text"
-               maxlength="16"
-               name="attributes[ei-fiscal-code]"
-               value="{{ cart.attributes["ei-fiscal-code"] }}"/>
-      </label>
-    </div>
-    <div>
-      <label>
-        <span>{{ 'ei.vat' | t }}</span>
+        <span>{{ 'fe.fiscal-code' | t }}</span>
         <input type="text"
                maxlength="16"
-               name="attributes[ei-vat]"
-               value="{{ cart.attributes["ei-vat"] }}"/>
+               name="attributes[fe-codice-fiscale]"
+               value="{{ cart.attributes["fe-codice-fiscale"] }}"/>
       </label>
     </div>
     <div>
       <label>
-        <span>{{ 'ei.sdi' | t }}</span>
+        <span>{{ 'fe.vat' | t }}</span>
+        <input type="text"
+               maxlength="16"
+               name="attributes[fe-piva]"
+               value="{{ cart.attributes["fe-piva"] }}"/>
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>{{ 'fe.sdi' | t }}</span>
         <input type="text"
                maxlength="7"
-               name="attributes[ei-sdi]"
-               value="{{ cart.attributes["ei-sdi"] }}"/>
+               name="attributes[fe-sdi]"
+               value="{{ cart.attributes["fe-sdi"] }}"/>
       </label>
     </div>
     <div>
       <label>
-        <span>{{ 'ei.pec' | t }}</span>
+        <span>{{ 'fe.pec' | t }}</span>
         <input type="email"
-               name="attributes[ei-pec]"
-               value="{{ cart.attributes["ei-pec"] }}"/>
+               name="attributes[fe-pec]"
+               value="{{ cart.attributes["fe-pec"] }}"/>
       </label>
     </div>
     <div>
       <label>
-        <span>{{ 'ei.cig' | t }}</span>
+        <span>{{ 'fe.cig' | t }}</span>
         <input type="text"
                maxlength="10"
-               name="attributes[ei-cig]"
-               value="{{ cart.attributes["ei-cig"] }}"/>
+               name="attributes[fe-cig]"
+               value="{{ cart.attributes["fe-cig"] }}"/>
       </label>
     </div>
     <div>
       <label>
-        <span>{{ 'ei.cup' | t }}</span>
+        <span>{{ 'fe.cup' | t }}</span>
         <input type="text"
                maxlength="15"
-               name="attributes[ei-cup]"
-               value="{{ cart.attributes["ei-cup"] }}"/>
+               name="attributes[fe-cup]"
+               value="{{ cart.attributes["fe-cup"] }}"/>
       </label>
     </div>
     <div>
       <label>
         <input type="checkbox"
-               name="attributes[ei-split-payment]"
-               value="Yes"{% if cart.attributes["ei-split-payment"] == "Yes" %} checked{% endif %} />
-        <span style="display: inline;">{{ 'ei.split-payment' | t }}</span>
+               name="attributes[fe-pagamenti-separati]"
+               value="Yes"{% if cart.attributes["fe-pagamenti-separati"] == "Yes" %} checked{% endif %} />
+        <span style="display: inline;">{{ 'fe.split-payment' | t }}</span>
       </label>
     </div>
+    <p>{{ 'fe.info' | t }}</p>
   </div>
-  </div>
+</div>
 
 <style>
-  .ei-container .ei-fileds > div:not(.ei-customer-type) span{
+  .fe-container .fe-campi > div:not(.fe-tipo-cliente) span{
     display: block;
     margin-bottom: 5px;
   }
-  .ei-container .ei-fileds > div:not(.ei-customer-type) input:not([type*='checkbox']){
+  .fe-container .fe-campi > div:not(.fe-tipo-cliente) input:not([type*='checkbox']){
     display: block;
     width: 100%;
     max-width: 500px;
   }
-  .ei-container .ei-fileds > div.ei-customer-type{
+  .fe-container .fe-campi > div.fe-tipo-cliente{
     margin-bottom: 10px;
   }
 </style>
 
 <script type="text/javascript">
+
   window.sintraElectronicInvoice = function () {
     function init(a) {
       bindRequireInvoiceFlag();
@@ -135,12 +130,12 @@
     }
 
     function bindRequireInvoiceFlag() {
-      var element = document.querySelector('input[name="attributes[ei-request]"]');
+      var element = document.querySelector('input[name="attributes[fe-richiesta]"]');
       element.addEventListener("change", updateFormVisibility, false);
     }
 
     function bindSelectCustomer() {
-      var element = document.querySelectorAll('input[name="attributes[ei-customer-type]"]');
+      var element = document.querySelectorAll('input[name="attributes[fe-tipo-cliente]"]');
       element.forEach(function () {
         addEventListener("change", updateCustomerType, false)
       });
@@ -152,9 +147,9 @@
     }
 
     function updateFormVisibility() {
-      var eiRequest = document.querySelector('input[name="attributes[ei-request]"]');
+      var feRequest = document.querySelector('input[name="attributes[fe-richiesta]"]');
 
-      if (!eiRequest.checked) {
+      if (!feRequest.checked) {
         hideAndDisableAllFields();
       } else {
         updateCustomerType();
@@ -164,28 +159,28 @@
 
     function showCustomerType() {
       var companyFields = [
-        "ei-customer-type"
+        "fe-tipo-cliente"
       ];
       showSingularFields(companyFields);
     }
 
     function updateCustomerType() {
-      var eiRequest = document.querySelector('input[name="attributes[ei-request]"]'),
-        eiCustomerType = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[ei-customer-type]"]:checked');
+      var feRequest = document.querySelector('input[name="attributes[fe-richiesta]"]'),
+        feCustomerType = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[fe-tipo-cliente]"]:checked');
 
-      if (!eiRequest.checked) {
+      if (!feRequest.checked) {
         return;
       }
 
-      if (eiCustomerType) {
+      if (feCustomerType) {
         hideAndDisableAllFields();
-        if (eiCustomerType.value === 'private') {
+        if (feCustomerType.value === 'private') {
           showPrivate();
-        } else if (eiCustomerType.value === 'company') {
+        } else if (feCustomerType.value === 'company') {
           showCompany();
-        } else if (eiCustomerType.value === 'public-administration') {
+        } else if (feCustomerType.value === 'public-administration') {
           showPublicAdministration();
-        } else if (eiCustomerType.value === 'no-profit') {
+        } else if (feCustomerType.value === 'no-profit') {
           showNoProfit();
         }
       }
@@ -193,9 +188,10 @@
 
     function hideAndDisableAllFields() {
       var element = document.querySelector('form[action="{{ routes.cart_url }}"]'),
-        attributes = element.querySelectorAll('input[name*=ei-]');
+        attributes = element.querySelectorAll('input[name*=fe-]');
+      document.getElementsByClassName('fe-container')[0].querySelector('p').style.display = "none";
       for (let a1 of attributes) {
-        if (a1.getAttribute('name').indexOf('ei-request') > -1) {
+        if (a1.getAttribute('name').indexOf('fe-richiesta') > -1) {
           continue;
         }
 
@@ -205,9 +201,10 @@
     }
 
     function showAndEnableInvoiceFields() {
-      var element = document.querySelectorAll('form[action="{{ routes.cart_url }}"] input[name*=ei-]');
+      var element = document.querySelectorAll('form[action="{{ routes.cart_url }}"] input[name*=fe-]');
+      document.getElementsByClassName('fe-container')[0].querySelector('p').style.display = "block";
       for (let a1 of element) {
-        if (a1.getAttribute('name').indexOf('ei-request') === -1) {
+        if (a1.getAttribute('name').indexOf('fe-richiesta') === -1) {
           a1.disabled = false;
           a1.parentElement.parentElement.style.display = "block";
         }
@@ -215,9 +212,10 @@
     }
 
     function showSingularFields(fields) {
+      document.getElementsByClassName('fe-container')[0].querySelector('p').style.display = "block";
       for (let field of fields) {
         var attribute_name = 'input[name="attributes[' + field + ']"';
-        if (field === "ei-customer-type") {
+        if (field === "fe-tipo-cliente") {
           var radio = document.querySelectorAll(attribute_name);
           for (i = 0; i < radio.length; i++) {
             radio[i].disabled = false;
@@ -232,44 +230,44 @@
 
     function showPrivate() {
       showSingularFields([
-        "ei-customer-type",
-        "ei-fiscal-code"
+        "fe-tipo-cliente",
+        "fe-codice-fiscale"
       ]);
     }
 
     function showCompany() {
       showSingularFields([
-        "ei-customer-type",
-        "ei-company",
-        "ei-fiscal-code",
-        "ei-vat",
-        "ei-sdi",
-        "ei-pec"
+        "fe-tipo-cliente",
+        "fe-azienda",
+        "fe-codice-fiscale",
+        "fe-piva",
+        "fe-sdi",
+        "fe-pec"
       ]);
     }
 
     function showPublicAdministration() {
       showSingularFields([
-        "ei-customer-type",
-        "ei-company",
-        "ei-fiscal-code",
-        "ei-vat",
-        "ei-sdi",
-        "ei-pec",
-        "ei-cig",
-        "ei-cup",
-        "ei-split-payment"
+        "fe-tipo-cliente",
+        "fe-azienda",
+        "fe-codice-fiscale",
+        "fe-piva",
+        "fe-sdi",
+        "fe-pec",
+        "fe-cig",
+        "fe-cup",
+        "fe-pagamenti-separati"
       ]);
     }
 
     function showNoProfit() {
       showSingularFields([
-        "ei-customer-type",
-        "ei-company",
-        "ei-fiscal-code",
-        "ei-vat",
-        "ei-sdi",
-        "ei-pec"
+        "fe-tipo-cliente",
+        "fe-azienda",
+        "fe-codice-fiscale",
+        "fe-piva",
+        "fe-sdi",
+        "fe-pec"
       ]);
     }
 
@@ -311,22 +309,22 @@
 
 
     function validate() {
-      let eiRequest = document.querySelector('input[name="attributes[ei-request]"]'),
-        eiCustomerType = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[ei-customer-type]"]:checked');
+      let feRequest = document.querySelector('input[name="attributes[fe-richiesta]"]'),
+        feCustomerType = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[fe-tipo-cliente]"]:checked');
 
-      if (!eiRequest.checked || !eiCustomerType) {
+      if (!feRequest.checked || !feCustomerType) {
         return;
       }
 
-      let fiscalCode = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[ei-fiscal-code]"]'),
-        company = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[ei-company]"]'),
-        vat = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[ei-vat]"]'),
-        pec = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[ei-pec]"]'),
-        sdi = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[ei-sdi]"]'),
-        cig = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[ei-cig]"]'),
-        cup = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[ei-cup]"]');
+      let fiscalCode = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[fe-codice-fiscale]"]'),
+        company = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[fe-azienda]"]'),
+        vat = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[fe-piva]"]'),
+        pec = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[fe-pec]"]'),
+        sdi = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[fe-sdi]"]'),
+        cig = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[fe-cig]"]'),
+        cup = document.querySelector('form[action="{{ routes.cart_url }}"] input[name="attributes[fe-cup]"]');
 
-      switch (eiCustomerType.value) {
+      switch (feCustomerType.value) {
         case 'private':
           if (fiscalCode.value.trim() === '') {
             throw 'Fiscal code is required';
@@ -346,7 +344,7 @@
           }
 
           if (fiscalCode.value.trim() !== '') {
-            if (!isFiscalCodeValid(fiscalCode.value)) {
+            if (!isFiscalCodeValid(fiscalCode.value) && fiscalCode.value.trim() !== vat.value.trim()) {
               throw 'Invalid fiscal code';
             }
           }
@@ -485,4 +483,3 @@
   window.sintraElectronicInvoice().init();
 
 </script>
-
