@@ -4,7 +4,7 @@
       <input type="checkbox"
              name="attributes[fe-richiesta]"
              value="Yes"{% if cart.attributes["fe-richiesta"] == "Yes" %} checked{% endif %} />
-      <span>{{ 'fe.request' | t }}</span>
+      <span>Richiedi Fattura</span>
     </label>
   </div>
   <div class="fe-campi">
@@ -14,26 +14,19 @@
                name="attributes[fe-tipo-cliente]"
                value="private"
                {% if cart.attributes["fe-tipo-cliente"] == "private" %}checked{% endif %}/>
-        <span>{{ 'fe.customer-type.private' | t }}</span>
+        <span>Privato</span>
       </label>
       <label>
         <input type="radio"
                name="attributes[fe-tipo-cliente]"
                value="company"
                {% if cart.attributes["fe-tipo-cliente"] == "company" %}checked{% endif %}/>
-        <span>{{ 'fe.customer-type.company' | t }}</span>
-      </label>
-      <label>
-        <input type="radio"
-               name="attributes[fe-tipo-cliente]"
-               value="no-profit"
-               {% if cart.attributes["fe-tipo-cliente"] == "no-profit" %}checked{% endif %}/>
-        <span>{{ 'fe.customer-type.no-profit' | t }}</span>
+        <span>Azienda</span>
       </label>
     </div>
     <div>
       <label>
-        <span>{{ 'fe.company' | t }}</span>
+        <span>Azienda - Ragione Sociale</span>
         <input type="text"
                name="attributes[fe-azienda]"
                value="{{ cart.attributes["fe-azienda"] }}"/>
@@ -41,7 +34,7 @@
     </div>
     <div>
       <label>
-        <span>{{ 'fe.fiscal-code' | t }}</span>
+        <span>Codice Fiscale</span>
         <input type="text"
                maxlength="16"
                name="attributes[fe-codice-fiscale]"
@@ -50,7 +43,7 @@
     </div>
     <div>
       <label>
-        <span>{{ 'fe.vat' | t }}</span>
+        <span>Partita IVA</span>
         <input type="text"
                maxlength="16"
                name="attributes[fe-piva]"
@@ -59,7 +52,7 @@
     </div>
     <div>
       <label>
-        <span>{{ 'fe.sdi' | t }}</span>
+        <span>Codice SDI</span>
         <input type="text"
                maxlength="7"
                name="attributes[fe-sdi]"
@@ -68,7 +61,7 @@
     </div>
     <div>
       <label>
-        <span>{{ 'fe.pec' | t }}</span>
+        <span>PEC</span>
         <input type="email"
                name="attributes[fe-pec]"
                value="{{ cart.attributes["fe-pec"] }}"/>
@@ -76,7 +69,7 @@
     </div>
     <div>
       <label>
-        <span>{{ 'fe.cig' | t }}</span>
+        <span>CIG</span>
         <input type="text"
                maxlength="10"
                name="attributes[fe-cig]"
@@ -85,7 +78,7 @@
     </div>
     <div>
       <label>
-        <span>{{ 'fe.cup' | t }}</span>
+        <span>CUP</span>
         <input type="text"
                maxlength="15"
                name="attributes[fe-cup]"
@@ -100,7 +93,6 @@
         <span style="display: inline;">{{ 'fe.split-payment' | t }}</span>
       </label>
     </div>
-    <p>{{ 'fe.info' | t }}</p>
   </div>
 </div>
 
@@ -189,7 +181,6 @@
     function hideAndDisableAllFields() {
       var element = document.querySelector('form[action="{{ routes.cart_url }}"]'),
         attributes = element.querySelectorAll('input[name*=fe-]');
-      document.getElementsByClassName('fe-container')[0].querySelector('p').style.display = "none";
       for (let a1 of attributes) {
         if (a1.getAttribute('name').indexOf('fe-richiesta') > -1) {
           continue;
@@ -202,7 +193,6 @@
 
     function showAndEnableInvoiceFields() {
       var element = document.querySelectorAll('form[action="{{ routes.cart_url }}"] input[name*=fe-]');
-      document.getElementsByClassName('fe-container')[0].querySelector('p').style.display = "block";
       for (let a1 of element) {
         if (a1.getAttribute('name').indexOf('fe-richiesta') === -1) {
           a1.disabled = false;
@@ -212,7 +202,6 @@
     }
 
     function showSingularFields(fields) {
-      document.getElementsByClassName('fe-container')[0].querySelector('p').style.display = "block";
       for (let field of fields) {
         var attribute_name = 'input[name="attributes[' + field + ']"';
         if (field === "fe-tipo-cliente") {
@@ -327,97 +316,97 @@
       switch (feCustomerType.value) {
         case 'private':
           if (fiscalCode.value.trim() === '') {
-            throw 'Fiscal code is required';
+            throw "Codice fiscale richiesto";
           }
           if (!isFiscalCodeValid(fiscalCode.value)) {
-            throw 'Invalid fiscal code';
+            throw "Codice fiscale non valido";
           }
           break;
 
         case 'company':
           if (company.value.trim() === '') {
-            throw 'Company is required';
+            throw "Nome compagnia richiesto";
           }
 
           if (fiscalCode.value.trim() === '' && vat.value.trim() === '') {
-            throw 'At least one between fiscal code and vat is required';
+            throw "Richiesta partita IVA o codice fiscale";
           }
 
           if (fiscalCode.value.trim() !== '') {
             if (!isFiscalCodeValid(fiscalCode.value) && fiscalCode.value.trim() !== vat.value.trim()) {
-              throw 'Invalid fiscal code';
+              throw "Codice fiscale non valido";
             }
           }
 
           if (vat.value.trim() !== '') {
             if (!isVatValid(vat.value)) {
-              throw 'Invalid vat';
+              throw "Partita IVA non valida";
             }
           }
 
           if (pec.value.trim() === '' && sdi.value.trim() === '') {
-            throw 'At least one between PEC and SDI is required';
+            throw "Richiesta PEC o SDI";
           }
 
           if (pec.value.trim() !== '') {
             if (!isPecValid(pec.value)) {
-              throw 'Invalid PEC';
+              throw "PEC non valida";
             }
           }
 
           if (sdi.value.trim() !== '') {
             if (!isSdiValid(sdi.value)) {
-              throw 'SDI must be 7 characters';
+              throw "SDI richiede 7 lettere";
             }
           }
           break;
 
         case 'public-administration':
           if (company.value.trim() === '') {
-            throw 'Company is required';
+            throw "Nome compagnia richiesto";
           }
 
           if (fiscalCode.value.trim() === '' && vat.value.trim() === '') {
-            throw 'At least one between fiscal code and vat is required';
+           throw "Richiesta partita IVA o codice fiscale";
           }
 
           if (fiscalCode.value.trim() !== '') {
             if (!isFiscalCodeValid(fiscalCode.value)) {
-              throw 'Invalid fiscal code';
+              throw "Codice fiscale non valido";
             }
           }
 
           if (vat.value.trim() !== '') {
             if (!isVatValid(vat.value)) {
-              throw 'Invalid vat';
+              throw "Partita IVA non valida";
             }
           }
 
           if (pec.value.trim() === '' && sdi.value.trim() === '') {
-            throw 'At least one between PEC and SDI is required';
+            throw "Richiesta PEC o SDI";
           }
 
           if (pec.value.trim() !== '') {
             if (!isPecValid(pec.value)) {
-              throw 'Invalid PEC';
+              throw "PEC non valida";
             }
           }
 
           if (sdi.value.trim() !== '') {
             if (!isSdiValid(sdi.value)) {
-              throw 'SDI must be 7 characters';
+              throw "SDI richiede 7 lettere";
             }
           }
 
           if (cig.value.trim() !== '') {
             if (!isCigValid(cig.value)) {
-              throw 'CIG must be 10 characters';
+              throw "CIG richiede 10 lettere";
             }
           }
 
           if (cup.value.trim() !== '') {
             if (!isCupValid(cup.value)) {
-              throw 'CUP must be 15 characters';
+              throw "CUP richiede 15 lettere";
             }
           }
 
@@ -425,38 +414,38 @@
 
         case 'no-profit':
           if (company.value.trim() === '') {
-            throw 'Company is required';
+            throw "{{ 'fe.company-required' | t }}";
           }
 
           if (fiscalCode.value.trim() === '' && vat.value.trim() === '') {
-            throw 'At least one between fiscal code and vat is required';
+            throw "{{ 'fe.fiscal-code-vat-required' | t }}";
           }
 
           if (fiscalCode.value.trim() !== '') {
             if (!isFiscalCodeValid(fiscalCode.value)) {
-              throw 'Invalid fiscal code';
+              throw "{{ 'fe.fiscal-code-error' | t }}";
             }
           }
 
           if (vat.value.trim() !== '') {
             if (!isVatValid(vat.value)) {
-              throw 'Invalid vat';
+              throw "{{ 'fe.vat-error' | t }}";
             }
           }
 
           if (pec.value.trim() === '' && sdi.value.trim() === '') {
-            throw 'At least one between PEC and SDI is required';
+            throw "{{ 'fe.pec-sdi-required' | t }}";
           }
 
           if (pec.value.trim() !== '') {
             if (!isPecValid(pec.value)) {
-              throw 'Invalid PEC';
+              throw "{{ 'fe.pec-error' | t }}";
             }
           }
 
           if (sdi.value.trim() !== '') {
             if (!isSdiValid(sdi.value)) {
-              throw 'SDI must be 7 characters';
+              throw "{{ 'fe.sdi-charcount' | t }}";
             }
           }
           break;
