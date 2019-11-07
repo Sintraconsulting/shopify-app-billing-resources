@@ -1,12 +1,15 @@
 Manager Fattura Elettronica è l'App che permette l'integrazione tra Shopify e i principali provider per la gestione della Fatturazione Elettronica: Fattura24, Fatture in Cloud, Fatturazione Elettronica di Aruba.
 
-#La configurazione prevede tre steps:
-##1. Scegli il tuo provider di fatturazione elettronica dal menù a tendina e inserisci le informazioni per connetterlo con l'App. 
 
-###Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con Fattura24.
+# La configurazione prevede tre steps:
+
+## 1. Scegli il tuo provider di fatturazione elettronica dal menù a tendina e inserisci le informazioni per connetterlo con l'App. 
+
+### Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con Fattura24.
 
 -  Copia l'Api Key di Fattura24 che trovi nel menù *Configurazione* alla sezione *App e servizi esterni* -> *Api e-commerce* -> *Shopify*. Si apre una finestra nella quale indicare **SI** alla voce **ATTIVO**. A questo punto occorre copiare la **Key** (selezioni la stringa -> tasto destro del mouse -> Copia).
 - Torni sulla schermata Impostazioni dell'App e Incolli la Key nel campo **Api Key**
+- [Vedi il video](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html#step1)
 
 ### Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con Fatture in Cloud.
 
