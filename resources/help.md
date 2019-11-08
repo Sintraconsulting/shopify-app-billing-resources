@@ -109,8 +109,7 @@ Inserisci lo snippet di codice
 }
 
 
-Il codice deve essere incollato all'interno del codice sorgente nel file en.default.json 
-all'altezza della riga 391: 
+Il codice deve essere incollato nel file en.default.json all'altezza della riga 391: 
 inserisci una virgola accanto alla penultima parentesi graffa, premi invio e incolla il codice.
 
 Puoi inserire il codice anche nei file delle altre lingue (ad esempio nel file fr.json per il francese), 
