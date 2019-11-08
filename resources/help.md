@@ -2,7 +2,7 @@ Manager Fattura Elettronica è l'App che permette l'integrazione tra Shopify e i
 
 L'App Manager Fattura Elettronica è molto semplice da installare, seguendo le nostre istruzioni puoi configurarla da solo in pochi minuti.
 
-Il nostro supporto gratuito in italiano è sempre a disposizione attraverso la casella di posta dedicata -[supporto@sintra.app](mailto:supporto@sintra.app), così da guidarti passo passo.
+Il nostro supporto gratuito in italiano è comunque sempre a disposizione attraverso la casella di posta dedicata così da guidarti passo passo. Se hai bisogno di aiuto scrivi a [supporto@sintra.app](mailto:supporto@sintra.app).
 
 # La configurazione prevede tre steps:
 
