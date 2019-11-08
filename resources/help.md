@@ -4,17 +4,22 @@ L'App Manager Fattura Elettronica è molto semplice da installare, seguendo le n
 
 Il nostro supporto gratuito in italiano è comunque sempre a disposizione attraverso la casella di posta dedicata così da guidarti passo passo. Se hai bisogno di aiuto scrivi a [supporto@sintra.app](mailto:supporto@sintra.app).
 
-# La configurazione prevede tre steps:
+Dopo aver installato Manager Fattura Elettronica sul tuo store, occorre configurarla per integrarla con il tuo provider di fatturazione elettronica.
 
-## 1. Scegli il tuo provider di fatturazione elettronica dal menù a tendina nella tab *Impostazioni* e inserisci le informazioni per connetterlo con l'App.   
+## La configurazione prevede tre steps:
 
-### Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con Fattura24.  
+### 1. Scegli il tuo provider di fatturazione elettronica dal menù a tendina nella tab *Impostazioni* e inserisci le informazioni per connetterlo con l'App.   
+
+Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con **Fattura24**.  
 
 -  Copia l'Api Key di Fattura24 che trovi nel menù *Configurazione* alla sezione *App e servizi esterni* -> *Api e-commerce* -> *Shopify*. Si apre una finestra nella quale indicare **SI** alla voce **ATTIVO**. A questo punto occorre copiare la **Key** (selezioni la stringa -> tasto destro del mouse -> Copia).
 - Torni sulla schermata Impostazioni dell'App e Incolli la Key nel campo **Api Key**
 - [Vedi il video](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html#step1)
 
-### Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con Fatture in Cloud.
+Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con **Fatture in Cloud**.
+
+
+Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con la fatturazione elettronica di **Aruba**.
 
 
 
