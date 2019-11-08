@@ -8,7 +8,9 @@ Dopo aver installato Manager Fattura Elettronica sul tuo store, occorre configur
 
 ## La configurazione prevede tre steps:
 
-### 1. Scegli il tuo provider di fatturazione elettronica dal menù a tendina nella tab *Impostazioni* e inserisci le informazioni per connetterlo con l'App.   
+### 1. CONNESSIONE
+Scegli il tuo provider di fatturazione elettronica dal menù a tendina nella tab *Impostazioni* e inserisci le informazioni per connetterlo con l'App.   
+
 
 Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con **Fattura24**.  
 
@@ -16,6 +18,7 @@ Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo c
 - Copia l'Api Key di Fattura24. La trovi nel menù *Configurazione* alla sezione *App e servizi esterni* -> *Api e-commerce* -> *Shopify*. Si apre una finestra nella quale indicare **SI** alla voce **ATTIVO**. A questo punto occorre copiare la **Key** (selezioni la stringa -> tasto destro del mouse -> Copia).
 - Torni sulla schermata Impostazioni dell'App e Incolli la Key nel campo **Api Key**
 - [Vedi il video](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html#step1)
+
 
 Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con **Fatture in Cloud**.
 
@@ -27,10 +30,18 @@ Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo c
 - [Vedi il video](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html#step1)
 
 
-
 Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con la fatturazione elettronica di **Aruba**.
 
+- COMING SOON
 
+
+### 2. STATO ORDINI
+In questa fase devi selezionare gli stati dell'ordine per i quali vuoi inviare la Fattura Elettronica. Puoi selezionare uno o più stati, e puoi comunque modificarli in seguito.
+
+- **Pending:** seleziona questo stato se vuoi che l'ordine sia inviato alla Fatturazione Elettronica quando il pagamento è ancora in pending.
+- **Authorized:** selezionando questo stato inoltrerai l'ordine alla Fatturazione Elettronica quando il pagamento sarà autorizzato.
+- **Paid:** se scegli questo stato gli ordini verranno inviati alla fatturazione elettronica nel momento in cui il pagamento sarà completato.
+- **Fullfilled:** scegliendo questo stato invierai alla fatturazione Elettronica tutti gli ordini che sono stati evasi.
 
 dsfdsfds
 fds
