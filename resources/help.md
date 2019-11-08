@@ -43,6 +43,29 @@ In questa fase devi selezionare gli stati dell'ordine per i quali vuoi inviare l
 - **Paid:** se scegli questo stato gli ordini verranno inviati alla fatturazione elettronica nel momento in cui il pagamento sarà completato.
 - **Fullfilled:** scegliendo questo stato invierai alla fatturazione Elettronica tutti gli ordini che sono stati evasi.
 
+
+### 3. RICHIEDI FATTURA
+
+Come ultima cosa è necessario inserire il codice per visualizzare la form di richiesta dati nel front-end. Come sai non è possibile personalizzare i campi per la richiesta della fattura sul check-out, così per avere certezza di raccogliere i dati obligatori per la produzione della fattura elettronica è stato necessario creare un form che puoi inserire dove ritieni opportuno. Noi ti consigliamo di inserirlo nel carrello (o nel minicart se il tuo template non prevede la pagina del carrello).
+
+Ci sono due casi.
+
+####- Caso 1 Store solo in Italiano. 
+
+``` 
+Inserisci lo snippet di codice
+
+{% include 'fatturazione-elettronica' %}
+
+Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: Negozio Online > Temi > Azioni > Modifica Codice
+
+Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
+
+
+```
+
+Se non sei sicuro, guarda [il video dedicato](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html) dove ti mostriamo tutti i passaggi da effettuare per inserirlo nella posizione esatta.
+
 dsfdsfds
 fds
 fds
