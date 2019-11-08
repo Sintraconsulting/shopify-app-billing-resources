@@ -12,11 +12,20 @@ Dopo aver installato Manager Fattura Elettronica sul tuo store, occorre configur
 
 Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con **Fattura24**.  
 
--  Copia l'Api Key di Fattura24 che trovi nel menù *Configurazione* alla sezione *App e servizi esterni* -> *Api e-commerce* -> *Shopify*. Si apre una finestra nella quale indicare **SI** alla voce **ATTIVO**. A questo punto occorre copiare la **Key** (selezioni la stringa -> tasto destro del mouse -> Copia).
+- Vai sul sito di [Fattura24](https://www.fattura24.com/)
+- Copia l'Api Key di Fattura24. La trovi nel menù *Configurazione* alla sezione *App e servizi esterni* -> *Api e-commerce* -> *Shopify*. Si apre una finestra nella quale indicare **SI** alla voce **ATTIVO**. A questo punto occorre copiare la **Key** (selezioni la stringa -> tasto destro del mouse -> Copia).
 - Torni sulla schermata Impostazioni dell'App e Incolli la Key nel campo **Api Key**
 - [Vedi il video](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html#step1)
 
 Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con **Fatture in Cloud**.
+
+- Vai sul sito di [Fatture in Cloud](https://secure.fattureincloud.it/)
+- Vai alla sezione *Api* del menù laterale e fai click su *MOSTRA API UID e API KEY*
+- Prima copia il codice dell'Api Key, torni nella schermata impostazioni dell'App e incolli il codice nel campo **Api Key**
+- Poi copia il codice dell'Api UID, torni nella schermata impostazioni dell'App e incolli il codice nel campo **Api UID**
+- Infine occorre che tu scriva il nome del sezionale nel quale vuoi che la fattura sia pre-compilata. Di default le fatture saranno create nel sezionale SHOPIFY.
+- [Vedi il video](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html#step1)
+
 
 
 Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con la fatturazione elettronica di **Aruba**.
