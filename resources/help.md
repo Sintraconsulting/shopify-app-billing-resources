@@ -59,7 +59,8 @@ Inserisci lo snippet di codice
 {% include 'fatturazione-elettronica' %}
 
 
-Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: Negozio Online > Temi > Azioni > Modifica Codice
+Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: 
+Negozio Online > Temi > Azioni > Modifica Codice
 
 Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
 
@@ -76,7 +77,8 @@ Inserisci lo snippet di codice
 {% include 'fatturazione-elettronica-multilingua' %}
 
 
-Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: Negozio Online > Temi > Azioni > Modifica Codice
+Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: 
+Negozio Online > Temi > Azioni > Modifica Codice
 
 Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
 
@@ -107,9 +109,13 @@ Inserisci lo snippet di codice
 }
 
 
-Il codice deve essere incollato all'interno del codice sorgente nel file en.default.json all'altezza della riga 391: inserisci una virgola accanto alla penultima parentesi graffa, premi invio e incolla il codice.
+Il codice deve essere incollato all'interno del codice sorgente nel file en.default.json 
+all'altezza della riga 391: 
+inserisci una virgola accanto alla penultima parentesi graffa, premi invio e incolla il codice.
 
-Puoi inserire il codice anche nei file delle altre lingue (ad esempio nel file fr.json per il francese), seguendo la stessa procedura e cambiando solo le parti del codice evidenziate in arancione e traducendole nella lingua che hai scelto.
+Puoi inserire il codice anche nei file delle altre lingue (ad esempio nel file fr.json per il francese), 
+seguendo la stessa procedura e cambiando solo le parti del codice evidenziate in arancione 
+e traducendole nella lingua che hai scelto.
 
 ```
 
