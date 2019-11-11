@@ -46,7 +46,7 @@ In questa fase devi selezionare gli stati dell'ordine per i quali vuoi inviare l
 
 ### 3. RICHIEDI FATTURA
 
-Come ultima cosa è necessario inserire il codice per visualizzare la form di richiesta dati nel front-end. Come sai non è possibile personalizzare i campi per la richiesta della fattura sul check-out, così per avere certezza di raccogliere i dati obligatori per la produzione della fattura elettronica è stato necessario creare un form che puoi inserire dove ritieni opportuno. Noi ti consigliamo di inserirlo nel carrello (o nel minicart se il tuo template non prevede la pagina del carrello).
+Come ultima cosa è necessario inserire il codice per visualizzare la form di richiesta dati nel front-end. Come sai non è possibile personalizzare i campi per la richiesta della fattura sul check-out, così per avere certezza di raccogliere i dati obbligatori per la produzione della fattura elettronica è stato necessario creare una form che puoi inserire dove ritieni opportuno. Noi ti consigliamo di inserirla nel carrello (o nel minicart se il tuo template non prevede la pagina del carrello).
 
 Ci sono due casi.
 
