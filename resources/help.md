@@ -56,7 +56,7 @@ Ci sono due casi.
 Inserisci lo snippet di codice
 
 
-{% include 'fatturazione-elettronica' %}
+{% render 'fatturazione-elettronica' %}
 
 
 Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: 
@@ -74,7 +74,7 @@ Se non sei sicuro, guarda [il video dedicato](https://managerfatturaelettronica.
 Inserisci lo snippet di codice
 
 
-{% include 'fatturazione-elettronica-multilingua' %}
+{% render 'fatturazione-elettronica-multilingua' %}
 
 
 Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: 
