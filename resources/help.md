@@ -52,70 +52,63 @@ Ci sono due casi.
 
 #### Caso 1 Store solo in Italiano. 
 
-<pre><code>
-Inserisci lo snippet di codice
-
-
-{% render 'fatturazione-elettronica' %}
-
-
-Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: 
-Negozio Online > Temi > Azioni > Modifica Codice
-
-Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
-</code></pre>
+> Inserisci lo snippet di codice
+>
+>
+> {% render 'fatturazione-elettronica' %}
+> 
+> 
+> Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: 
+> Negozio Online > Temi > Azioni > Modifica Codice
+> 
+> Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
 
 Se non sei sicuro, guarda [il video dedicato](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html) dove ti mostriamo tutti i passaggi da effettuare per inserirlo nella posizione esatta.
 
 #### Caso 2 Store Multilingua. 
 
-<pre><code>
-Inserisci lo snippet di codice
+> Inserisci lo snippet di codice
+> 
+> 
+> {% render 'fatturazione-elettronica-multilingua' %}
+> 
+> 
+> Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: 
+> Negozio Online > Temi > Azioni > Modifica Codice
+> 
+> Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
+> 
 
-
-{% render 'fatturazione-elettronica-multilingua' %}
-
-
-Il codice deve essere incollato all'interno del codice sorgente del tuo negozio: 
-Negozio Online > Temi > Azioni > Modifica Codice
-
-Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
-
-</code></pre>
 dopodiché
 
-<pre><code>
-Inserisci lo snippet di codice
-
-
-"fe": {
-  "request" : "Richiedi fattura",
-  "company" : "Azienda - Ragione Sociale",
-  "fiscal-code" : "Codice fiscale",
-  "vat" : "Partita Iva",
-  "sdi" : "Codice SDI",
-  "pec": "Pec",
-  "cig": "CIG",
-  "cup": "CUP",
-  "split-payment": "Split-payment",
-  "info": "If inserted informations are correct you can proceed to checkout",
-  "customer-type": {
-    "private": "Privato",
-    "company": "Azienda",
-    "public-administration": "Pubblica Amministrazione",
-    "no-profit": "No-Profit"
-  }
-}
-
-
-Il codice deve essere incollato nel file en.default.json all'altezza della riga 391: 
-inserisci una virgola accanto alla penultima parentesi graffa, premi invio e incolla il codice.
-
-Puoi inserire il codice anche nei file delle altre lingue (ad esempio nel file fr.json per il francese), 
-seguendo la stessa procedura e cambiando solo le parti del codice evidenziate in arancione 
-e traducendole nella lingua che hai scelto.
-
-</code></pre>
+> Inserisci lo snippet di codice
+> 
+> 
+> "fe": {<br/>
+> &emsp;"request" : "Richiedi fattura",<br/>
+> &emsp;"company" : "Azienda - Ragione Sociale",<br/>
+> &emsp;"fiscal-code" : "Codice fiscale",<br/>
+> &emsp;"vat" : "Partita Iva",<br/>
+> &emsp;"sdi" : "Codice SDI",<br/>
+> &emsp;"pec": "Pec",<br/>
+> &emsp;"cig": "CIG",<br/>
+> &emsp;"cup": "CUP",<br/>
+> &emsp;"split-payment": "Split-payment",<br/>
+> &emsp;"info": "If inserted informations are correct you can proceed to checkout",<br/>
+> &emsp;"customer-type": {<br/>
+> &emsp;&emsp;"private": "Privato",<br/>
+> &emsp;&emsp;"company": "Azienda",<br/>
+> &emsp;&emsp;"public-administration": "Pubblica Amministrazione",<br/>
+> &emsp;&emsp;"no-profit": "No-Profit"<br/>
+> &emsp;}<br/>
+> }<br/>
+> 
+> Il codice deve essere incollato nel file en.default.json all'altezza della riga 391: 
+> inserisci una virgola accanto alla penultima parentesi graffa, premi invio e incolla il codice.
+> 
+> Puoi inserire il codice anche nei file delle altre lingue (ad esempio nel file fr.json per il francese), 
+> seguendo la stessa procedura e cambiando solo le parti del codice evidenziate in arancione 
+> e traducendole nella lingua che hai scelto.
 
 ### Adesso devi solo iniziare ad usare Manager Fattura Elettronica!
 
