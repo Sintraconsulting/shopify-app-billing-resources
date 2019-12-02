@@ -52,7 +52,7 @@ Ci sono due casi.
 
 #### Caso 1 Store solo in Italiano. 
 
-``` 
+<pre><code>
 Inserisci lo snippet di codice
 
 
@@ -63,14 +63,13 @@ Il codice deve essere incollato all'interno del codice sorgente del tuo negozio:
 Negozio Online > Temi > Azioni > Modifica Codice
 
 Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
-
-```
+</code></pre>
 
 Se non sei sicuro, guarda [il video dedicato](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html) dove ti mostriamo tutti i passaggi da effettuare per inserirlo nella posizione esatta.
 
 #### Caso 2 Store Multilingua. 
 
-``` 
+<pre><code>
 Inserisci lo snippet di codice
 
 
@@ -82,10 +81,10 @@ Negozio Online > Temi > Azioni > Modifica Codice
 
 Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
 
-```
+</code></pre>
 dopodiché
 
-``` 
+<pre><code>
 Inserisci lo snippet di codice
 
 
@@ -116,7 +115,7 @@ Puoi inserire il codice anche nei file delle altre lingue (ad esempio nel file f
 seguendo la stessa procedura e cambiando solo le parti del codice evidenziate in arancione 
 e traducendole nella lingua che hai scelto.
 
-```
+</code></pre>
 
 ### Adesso devi solo iniziare ad usare Manager Fattura Elettronica!
 
