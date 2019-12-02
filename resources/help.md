@@ -81,24 +81,24 @@ dopodiché
 
 <pre><code>Inserisci lo snippet di codice
 
-"fe": {<br/>
-  "request" : "Richiedi fattura",<br/>
-  "company" : "Azienda - Ragione Sociale",<br/>
-  "fiscal-code" : "Codice fiscale",<br/>
-  "vat" : "Partita Iva",<br/>
-  "sdi" : "Codice SDI",<br/>
-  "pec": "Pec",<br/>
-  "cig": "CIG",<br/>
-  "cup": "CUP",<br/>
-  "split-payment": "Split-payment",<br/>
-  "info": "If inserted informations are correct you can proceed to checkout",<br/>
-  "customer-type": {<br/>
-    "private": "Privato",<br/>
-    "company": "Azienda",<br/>
-    "public-administration": "Pubblica Amministrazione",<br/>
-    "no-profit": "No-Profit"<br/>
-  }<br/>
-}<br/>
+"fe": {
+  "request" : "Richiedi fattura",
+  "company" : "Azienda - Ragione Sociale",
+  "fiscal-code" : "Codice fiscale",
+  "vat" : "Partita Iva",
+  "sdi" : "Codice SDI",
+  "pec": "Pec",
+  "cig": "CIG",
+  "cup": "CUP",
+  "split-payment": "Split-payment",
+  "info": "If inserted informations are correct you can proceed to checkout",
+  "customer-type": {
+    "private": "Privato",
+    "company": "Azienda",
+    "public-administration": "Pubblica Amministrazione",
+    "no-profit": "No-Profit"
+  }
+}
 
 Il codice deve essere incollato nel file en.default.json all'altezza della riga 391: 
 inserisci una virgola accanto alla penultima parentesi graffa, premi invio e incolla il codice.
