@@ -53,8 +53,8 @@ Ci sono due casi.
 #### Caso 1 Store solo in Italiano. 
 
 > Inserisci lo snippet di codice
->
->
+> 
+> 
 > {% render 'fatturazione-elettronica' %}
 > 
 > 
