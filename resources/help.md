@@ -36,6 +36,8 @@ Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo c
 
 <br/>
 Come configurare le impostazioni di Manager Fattura Elettronica per integrarlo con la fatturazione elettronica di **Aruba**.
+!! Stiamo lavorando per completare la configurazione di Aruba.
+Se sei interessato a questo provider in particolare, contatta il nostro supporto: ti ricontatteremo appena sarà disponibile!!
 
 - Scegli se sei un LIBERO PROFESSIONISTA o un'AZIENDA
 - Compila **tutti** i campi richiesti nella form. La username e la password sono quelle del tuo account Aruba.
