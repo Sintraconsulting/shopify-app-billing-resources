@@ -310,9 +310,9 @@
       if (!feRequest.checked && !is_required) {
         return;
       }else if(!feRequest.checked && is_required){
-        throw "{{ 'fe.required' | t }}";
+        throw "Completa i campi della fatturazione elettronica";
       }else if(feRequest.checked && feCustomerType == null){
-        throw "{{ 'fe.customer-type-required' | t }}";
+        throw "Deve essere selezionato almeno un tipo di cliente";
       }
 
       let fiscalCode = document.querySelector('#fe-richiedifattura input[name="attributes[fe-codice-fiscale]"]'),
@@ -424,38 +424,38 @@
 
         case 'no-profit':
           if (company.value.trim() === '') {
-            throw "{{ 'fe.company-required' | t }}";
+            throw "Nome compagnia richiesto";
           }
 
           if (fiscalCode.value.trim() === '' && vat.value.trim() === '') {
-            throw "{{ 'fe.fiscal-code-vat-required' | t }}";
+            throw "Richiesta partita IVA o codice fiscale";
           }
 
           if (fiscalCode.value.trim() !== '') {
             if (!isFiscalCodeValid(fiscalCode.value)) {
-              throw "{{ 'fe.fiscal-code-error' | t }}";
+              throw "Codice fiscale non valido";
             }
           }
 
           if (vat.value.trim() !== '') {
             if (!isVatValid(vat.value)) {
-              throw "{{ 'fe.vat-error' | t }}";
+              throw "Partita IVA non valida";
             }
           }
 
           if (pec.value.trim() === '' && sdi.value.trim() === '') {
-            throw "{{ 'fe.pec-sdi-required' | t }}";
+            throw "Richiesta PEC o SDI";
           }
 
           if (pec.value.trim() !== '') {
             if (!isPecValid(pec.value)) {
-              throw "{{ 'fe.pec-error' | t }}";
+              throw "PEC non valida";
             }
           }
 
           if (sdi.value.trim() !== '') {
             if (!isSdiValid(sdi.value)) {
-              throw "{{ 'fe.sdi-charcount' | t }}";
+              throw "SDI richiede 7 lettere";
             }
           }
           break;
