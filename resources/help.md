@@ -57,6 +57,8 @@ In questa fase devi selezionare gli stati dell'ordine per i quali vuoi inviare l
 
 Come ultima cosa è necessario inserire il codice per visualizzare la form di richiesta dati nel front-end. Come sai non è possibile personalizzare i campi per la richiesta della fattura sul check-out, così per avere certezza di raccogliere i dati obbligatori per la produzione della fattura elettronica è stato necessario creare una form che puoi inserire dove ritieni opportuno. Noi ti consigliamo di inserirla nel carrello (o nel minicart se il tuo template non prevede la pagina del carrello).
 
+Ricorda che i passaggi sono pensati per il tema standard di Shopify, Dawn.
+
 Ci sono due casi.
 
 #### Caso 1 Store solo in Italiano. 
@@ -71,10 +73,8 @@ Il codice deve essere incollato all'interno del codice sorgente del tuo negozio:
 Negozio Online > Temi > Azioni > Modifica Codice
 <br/>
 
-Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
+ Cerca il file main-cart-item.liquid ed inserisci la stringa di codice all'interno del tag /form>.
 <br/>
-
-Se non sei sicuro, guarda [il video dedicato](https://managerfatturaelettronica.sintra.app/guida-all_installazione.html) dove ti mostriamo tutti i passaggi da effettuare per inserirlo nella posizione esatta.
 <br/>
 
 #### Caso 2 Store Multilingua. 
@@ -89,13 +89,10 @@ Il codice deve essere incollato all'interno del codice sorgente del tuo negozio:
 Negozio Online > Temi > Azioni > Modifica Codice
 <br/>
 
-Cerca il file cart-template.liquid ed inserisci la stringa di codice all'altezza della riga 225.
+Cerca il file main-cart-item.liquid ed inserisci la stringa di codice all'interno del tag /form>.
 <br/>
 
-dopodiché
-<br/>
-
-Inserisci lo snippet di codice
+dopodiché inserisci lo snippet di codice seguente:
 
 <pre><code>
 "fe": {
@@ -108,7 +105,25 @@ Inserisci lo snippet di codice
   "cig": "CIG",
   "cup": "CUP",
   "split-payment": "Split-payment",
-  "info": "If inserted informations are correct you can proceed to checkout",
+"required" : "Completa i campi della fatturazione elettronica",
+"customer-type-required": "Deve essere selezionato almeno un tipo di cliente",
+
+"fiscal-code-required": "Codice Fiscale Richiesto",
+
+"fiscal-code-error": "Codice Fiscale Non Valido",
+
+"company-required": "Nome compagnia richiesto",
+
+  "fiscal-code-vat-required": "Richiesta Partita IVA o Codice Fiscale",
+  "vat-error": "Partita Iva non valida", 
+  "pec-error": "PEC non valida", 
+  "fiscal-code-vat-required": "Richiesta Partita IVA o Codice Fiscale",
+
+  "sdi-charcount": "SDI richiede 7 lettere", 
+  "cig-charcount": "CIG richiede 10 lettere",
+  "cup-charcount": "CUP richiede 15 lettere",
+
+"pec-sdi-required": "Richiesta PEC o SDI",
   "customer-type": {
     "private": "Privato",
     "company": "Azienda",
@@ -118,13 +133,11 @@ Inserisci lo snippet di codice
 }
 </code></pre>
 
-Il codice deve essere incollato nel file en.default.json all'altezza della riga 391: 
-inserisci una virgola accanto alla penultima parentesi graffa, premi invio e incolla il codice.
+Questa parte deve essere inserita nel file en.default.json: inserisci una virgola accanto alla penultima parentesi graffa, premi invio e incolla il codice.
+
 <br/>
 
-Puoi inserire il codice anche nei file delle altre lingue (ad esempio nel file fr.json per il francese), 
-seguendo la stessa procedura e cambiando solo le parti del codice evidenziate in arancione 
-e traducendole nella lingua che hai scelto.
+Puoi inserire il codice anche nei file delle altre lingue (ad esempio nel file fr.json per il francese), seguendo la stessa procedura e cambiando solo le parti del codice evidenziate in arancione, traducendole nella lingua che hai scelto.
 <br/>
 
 ### Adesso devi solo iniziare ad usare Manager Fattura Elettronica!
